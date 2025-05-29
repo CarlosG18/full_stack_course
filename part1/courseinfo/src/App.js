@@ -1,20 +1,6 @@
-const Header = (props) => {
-  return(
-    <>
-      <h1>{props.course}</h1>
-    </>
-  )
-}
+const Header = ({course}) => <h1>{course}</h1> 
 
-const Part = ({name, exercises}) => {
-  return(
-    <>
-      <p>
-        {name} {exercises}
-      </p>  
-    </>
-  )
-}
+const Part = ({name, exercises}) => <p>{name} {exercises}</p>  
 
 const Content = ({parts}) => {
   return(
@@ -26,13 +12,7 @@ const Content = ({parts}) => {
   )
 }
 
-const Total = ({total}) => {
-  return(
-    <>
-      <p>Number of exercises {total}</p>  
-    </>
-  )
-}
+const Total = ({total}) => <p>Number of exercises {total}</p>  
 
 function App() {
   const course = 'Desenvolvimento de aplicação Half Stack'
